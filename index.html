@@ -52,7 +52,7 @@
           console.log(i, li_top[i]);
       })
 
-      $(window).on('scroll', function(){
+      function timeline_check(){
         var win_height = $(window).height();
         console.log(win_height);
 
@@ -66,8 +66,8 @@
           console.log($('html, body').scrollTop());
           // console.log(i, li_top[i]);
         })
-
-      })
+      }  
+      $(window).on('scroll load', timeline_check);
 
 
     })
